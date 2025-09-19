@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Nuit du Réveillon</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* centre verticalement */
+      align-items: center;     /* centre horizontalement */
+      text-align: center;
+      background-color: #f9f9f9; /* optionnel, joli fond clair */
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎉 Scannez pour voir les infos de la Nuit du Réveillon 🎉</h2>
+  <div id="qrcode"></div>
+
+  <script>
+    // Mets ici le lien vers index.html une fois mis en ligne
+    var url = "https://github.com/S7piner/nuit-reveillon-cleo.git/index.html";
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: url,
+      width: 250,
+      height: 250
+    });
+  </script>
+</body>
+</html>
